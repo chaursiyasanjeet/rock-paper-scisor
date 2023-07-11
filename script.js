@@ -5,6 +5,9 @@ function openRule() {
 function closeRule() {
     document.querySelector("#game-rule").style.display = "none";
 }
+function nextButton() {
+    window.location.href = "./celebration.html";
+}
 
 
 //local storage
@@ -33,6 +36,7 @@ function inputTool(score) {
 let compScore = [5, 10, 15];
 function random() { return Math.floor(Math.random() * 3); }
 
+//user input and storing in local storage and switching to winning desgin template
 function rockScore() {
     let yourscore = document.querySelector(".your-score").innerText = 5;
     let computerscore = document.querySelector(".computer-score").innerText = compScore[random()];
@@ -62,17 +66,20 @@ function paperScore() {
     winningDesgin();
 }
 
+//wining design template
 function winningDesgin() {
     let windesign = document.querySelector(".winning-template");
-    windesign.style.width = "40%";
+    windesign.style.width = "50%";
     windesign.style.flexDirection = "row";
-
-
-
-    windesign.innerHTML = `<div class="choosen-option-logo">
+    windesign.innerHTML =
+        `<div class="circle1 userCircle1">
+    <div class="circle2 userCircle2">
     <span class="choosen-option-text">YOU PICKED</span>
+    <div class="choosen-option-logo userCircle3">
     <div class="${input[0]}">
         <img src="./assets/${input[0]}.png" alt="userpicked" class="game-tool-logo">
+        </div>
+    </div>
     </div>
 </div>
 <div class="winlose">
@@ -80,38 +87,52 @@ function winningDesgin() {
     <p class="constant-winning-text">AGAINST PC</p> <button class="play-again" onclick="playAgain()">PLAY
         AGAIN</button>
 </div>
-<div class="choosen-option-logo">
-    <span class="choosen-option-text">PC PICKED</span>
+<div class="circle1 compCircle1" >
+    <div class="circle2 compCircle2">
+    <span class="choosen-option-text ">PC PICKED</span>
+<div class="choosen-option-logo compCircle3" >
     <div class="${input[1]}">
         <img src="./assets/${input[1]}.png" alt="computerpicked" class="game-tool-logo">
     </div>
+    </div>
+</div>
 </div>`
+    if (input[0] == input[1]) {
+        document.querySelector(".constant-winning-text").innerText = "";
+        document.querySelector(".play-again").innerText = "REPLAY";
+        document.querySelector(".changing-text").style.top = "40px";
+        document.querySelector(".userCircle1").style.background = "transparent"
+        document.querySelector(".userCircle2").style.backgroundColor = "transparent"
+        document.querySelector(".userCircle3").style.backgroundColor = "transparent"
+        document.querySelector(".compCircle1").style.background = "transparent"
+        document.querySelector(".compCircle2").style.background = "transparent"
+        document.querySelector(".compCircle3").style.background = "transparent"
+    }
+    else if (input[1] > input[0]) {
+        document.querySelector(".userCircle1").style.background = "transparent"
+        document.querySelector(".userCircle2").style.background = "transparent"
+        document.querySelector(".userCircle3").style.background = "transparent"
+    }
+    else {
+        document.querySelector(".compCircle1").style.background = "transparent"
+        document.querySelector(".compCircle2").style.background = "transparent"
+        document.querySelector(".compCircle3").style.background = "transparent"
+    }
+
 }
 
 let winningDecide = function () {
-    if (input[0] < input[1]) {
+    if (input[0] > input[1]) {
         document.querySelector(".next-button").style.display = "block";
         return "YOU WIN";
     }
-    else if (input[0] > input[1]) {
+    else if (input[0] < input[1]) {
         return "YOU LOST"
     }
     else {
         return "TIE UP";
     }
 }
-
-// let winningDecide2 = function () {
-//     if (input[0] < input[1]) {
-//         return "AGAINST PC";
-//     }
-//     else if (input[0] > input[1]) {
-//         return "AGAINST PC"
-//     }
-//     else {
-//         return " ";
-//     }
-// }
 
 //game reset
 function playAgain() {
