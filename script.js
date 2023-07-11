@@ -101,22 +101,16 @@ function winningDesgin() {
         document.querySelector(".constant-winning-text").innerText = "";
         document.querySelector(".play-again").innerText = "REPLAY";
         document.querySelector(".changing-text").style.top = "40px";
-        document.querySelector(".userCircle1").style.background = "transparent"
-        document.querySelector(".userCircle2").style.backgroundColor = "transparent"
-        document.querySelector(".userCircle3").style.backgroundColor = "transparent"
-        document.querySelector(".compCircle1").style.background = "transparent"
-        document.querySelector(".compCircle2").style.background = "transparent"
-        document.querySelector(".compCircle3").style.background = "transparent"
     }
-    else if (input[1] > input[0]) {
-        document.querySelector(".userCircle1").style.background = "transparent"
-        document.querySelector(".userCircle2").style.background = "transparent"
-        document.querySelector(".userCircle3").style.background = "transparent"
+    else if (input[1] < input[0]) {
+        document.querySelector(".userCircle1").style.background = "rgba(46, 154, 37, 0.3)"
+        document.querySelector(".userCircle2").style.background = "rgba(46, 154, 37, 0.6)"
+        document.querySelector(".userCircle3").style.background = "rgba(46, 154, 37, 0.8)"
     }
     else {
-        document.querySelector(".compCircle1").style.background = "transparent"
-        document.querySelector(".compCircle2").style.background = "transparent"
-        document.querySelector(".compCircle3").style.background = "transparent"
+        document.querySelector(".compCircle1").style.background = "rgba(46, 154, 37, 0.3)"
+        document.querySelector(".compCircle2").style.background = "rgba(46, 154, 37, 0.6)"
+        document.querySelector(".compCircle3").style.background = "rgba(46, 154, 37, 0.8)"
     }
 
 }

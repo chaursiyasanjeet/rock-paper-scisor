@@ -156,30 +156,6 @@ main {
     left: 15px;
 }
 
-.userCircle1 {
-    background: rgba(46, 154, 37, 0.3);
-}
-
-.userCircle2 {
-    background: rgba(46, 154, 37, 0.6);
-}
-
-.userCircle3 {
-    background: rgba(46, 154, 37, 0.8);
-}
-
-.compCircle1 {
-    background: rgba(46, 154, 37, 0.3);
-}
-
-.compCircle2 {
-    background: rgba(46, 154, 37, 0.6);
-}
-
-.compCircle3 {
-    background: rgba(46, 154, 37, 0.8);
-}
-
 .choosen-option-logo {
     display: flex;
     flex-direction: column;
