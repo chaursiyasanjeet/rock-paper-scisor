@@ -12,7 +12,7 @@ Your challenge is to build out this Rock, Paper, Scissors game and get it lookin
 7. You also need to show a celebration animation if the human wins against the computer.
 
 I made this project using HTML, CSS, and JavaScript.
-Here are some screenshots after my project completion, you can also visit <a href="https://comfy-granita-c7cb05.netlify.app/" target="_blank">Click Here</a><br>
+Here are some screenshots after my project completion, you can also visit <a target="_blank" href="https://comfy-granita-c7cb05.netlify.app/" >Click Here</a><br>
 <b>Main page</b>
 <img width="960" alt="Screenshot 2023-07-11 165037" src="https://github.com/chaursiyasanjeet/rock-paper-scisor/assets/111435565/dce7ed53-2a87-46b1-936a-031800388cf5">
 <b>when user wins<b>
