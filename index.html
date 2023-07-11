@@ -17,19 +17,26 @@
                 <div class="scorer-name">YOUR<br> SCORE<span class="your-score">0</span></div>
             </div>
         </section>
-        <section class="selection-button">
-            <div class="rock" onclick="rockScore()"><img src="./assets/rock.png" alt="rock-logo" class="game-tool-logo">
+        <section class="winning-template">
+            <div class="selection-button">
+                <div class="rock" onclick="rockScore()"><img src="./assets/rock.png" alt="rock-logo"
+                        class="game-tool-logo">
+                </div>
+                <div class="scissor" onclick="scissorScore()"><img src="./assets/scissor.png" alt="scissor-logo"
+                        class="game-tool-logo"></div>
             </div>
-            <div class="scissor" onclick="scissorScore()"><img src="./assets/scissor.png" alt="scissor-logo"
-                    class="game-tool-logo"></div>
+            <img src="./assets/Line 1.png" alt="line1" class="line1">
+            <img src="./assets/Line 2.png" alt="line2" class="line2">
+            <img src="./assets/Line 3.png" alt="line3" class="line3">
+            <div class="paper" onclick="paperScore()"><img src="./assets/paper.png" alt="paper-logo"
+                    class="game-tool-logo">
+            </div>
         </section>
-        <img src="./assets/Line 1.png" alt="line1" class="line1">
-        <img src="./assets/Line 2.png" alt="line2" class="line2">
-        <img src="./assets/Line 3.png" alt="line3" class="line3">
-        <div class="paper" onclick="paperScore()"><img src="./assets/paper.png" alt="paper-logo" class="game-tool-logo">
-        </div>
     </main>
-    <button id="open-rule-button" onclick="openRule()">RULES</button>
+    <div class="rule-next-button">
+        <button id="open-rule-button" onclick="openRule()">RULES</button>
+        <button class="next-button"><a href="./celebration.html">NEXT</button>
+    </div>
     <div id="game-rule">
         <h1 class="rule-header">Game Rules</h1>
         <ul class="rule-list">
